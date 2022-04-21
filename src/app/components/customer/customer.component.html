@@ -1,7 +1,17 @@
-<table class="table">
+<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<table *ngIf="dataLoaded==true" class="table">
+    <thead>
+        <tr>
+          <th>Customer Name</th>
+          <th>E-Mail</th>
+          <th>Company Name</th>
+        </tr>
+      </thead>
     <tr *ngFor="let customer of customers">
-        <td>{{customer.customerId}}</td>
-        <td>{{customer.userId}}</td>
+        <td>{{customer.customerName}}</td>
+        <td>{{customer.EMail}}</td>
         <td>{{customer.companyName}}</td>
     </tr>
 </table>
