@@ -9,8 +9,7 @@ import { CarImageService } from 'src/app/services/car-image.service';
   styleUrls: ['./car-image.component.css']
 })
 export class CarImageComponent implements OnInit {
-  carImages: CarImage[]=[];
-
+  carImages:CarImage[]=[];
   baseUrl="https://localhost:44374/Uploads/Images/"
 
   constructor(
@@ -31,12 +30,11 @@ export class CarImageComponent implements OnInit {
     })
   }
   getActiveImageClass(carImage:CarImage){
-    if(carImage==this.carImages[0]){
+    if(carImage===this.carImages[0]){
       return "active"
     }
     else{
       return ""
     }
   }
-
 }

@@ -13,8 +13,6 @@ import { CarDetails } from 'src/app/models/carDetails';
 export class CarDetailComponent implements OnInit {
 
   cars:CarDetails[]=[];
-  dataLoaded = false;
-
   constructor(private carService: CarService,
      private activatedRoute:ActivatedRoute
      ) { }
