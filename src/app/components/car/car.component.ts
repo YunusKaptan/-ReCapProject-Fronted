@@ -24,6 +24,7 @@ export class CarComponent implements OnInit {
   imageOfPath:string;  
   brands:Brand[] = [];
   colors:Color[] = [];
+  filterText="";
 
   constructor(
   private carService: CarService,
