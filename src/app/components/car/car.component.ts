@@ -10,6 +10,7 @@ import { CarImage } from 'src/app/models/carImage';
 import { CarImageService } from 'src/app/services/car-image.service';
 import { Car } from 'src/app/models/car';
 import { ToastrService } from 'ngx-toastr';
+import { CartService } from 'src/app/services/cart.service';
 
 
 
@@ -34,7 +35,8 @@ export class CarComponent implements OnInit {
   private colorService:ColorService,
   private activatedRoute: ActivatedRoute,
   private carImageService:CarImageService,
-  private toastrService:ToastrService )
+  private toastrService:ToastrService,
+  private cartService:CartService )
    {}
 
   ngOnInit(): void {
@@ -112,6 +114,7 @@ export class CarComponent implements OnInit {
   }
 
   addToCart(car:Car){
-    this.toastrService.success("Added to cart", car.brandName)
+    this.toastrService.success("Added to favorites", car.brandName)
+    this.cartService.addToCart(car);
   }
 }
