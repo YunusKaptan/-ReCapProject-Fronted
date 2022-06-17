@@ -3,8 +3,28 @@
     <label for="filterText" class="form-label">Search car</label>
     <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="search...">
   </div>
+  
   <div *ngIf="filterText" class="alert alert-success">    
     Looking for {{filterText}}
+  </div>
+
+  
+  <div class="row">
+    <div class="col-md-4">
+      <select [(ngModel)]="branddFilter" class="form-select" aria-label="marka seç">
+        <option value="0" >Choose brand</option>
+        <option [value]="brand.brandId" *ngFor="let brand of brands" >{{brand.brandName}}</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <select [(ngModel)]="colorrFilter" class="form-select" aria-label="Default select example">
+        <option value="0" >Choose color</option>
+        <option [value]="color.colorId" *ngFor="let color of colors" >{{color.colorName}}</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <button routerLink="/cars/color/{{colorrFilter}}/brand/{{branddFilter}}" style="width: 100%;" class=" btn btn-outline-dark" type="button"> Filter</button>
+    </div>
   </div>
 
   <div class="row mt-4" style="margin-left: 1%;">
