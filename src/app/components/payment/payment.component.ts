@@ -80,7 +80,7 @@ export class PaymentComponent implements OnInit {
     }
   
     totalAmount(){
-
+      // check the daily price mistake
       const start = new Date(this.rentDate).getTime();
       const end = new Date(this.returnDate).getTime();
       const diff = end - start;
