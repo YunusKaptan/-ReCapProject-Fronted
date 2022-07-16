@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup,FormBuilder,FormControl,Validators, Form } from '@angular/forms';
+
 
 @Component({
   selector: 'app-color-add',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./color-add.component.css']
 })
 export class ColorAddComponent implements OnInit {
+  colorAddForm: FormGroup;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+
   }
+  createColorAddForm(){
+    this.colorAddForm=this.formBuilder.group({
+      colorName:["",Validators.required]
+    })
+  }
+  add(){
+    
+  }  
 
 }

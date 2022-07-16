@@ -12,7 +12,7 @@ export class BrandAddComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-
+    this.createBrandAddForm
   }
   createBrandAddForm(){
     this.brandAddForm=this.formBuilder.group({
