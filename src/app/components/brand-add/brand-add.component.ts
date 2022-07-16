@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup,FormBuilder,FormControl,Validators, Form } from '@angular/forms';
 
 @Component({
   selector: 'app-brand-add',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./brand-add.component.css']
 })
 export class BrandAddComponent implements OnInit {
+  brandAddForm: FormGroup;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+
+  }
+  createBrandAddForm(){
+    this.brandAddForm=this.formBuilder.group({
+      brandName:["",Validators.required]
+    })
+  }
+  add(){
+    
   }
 
 }
