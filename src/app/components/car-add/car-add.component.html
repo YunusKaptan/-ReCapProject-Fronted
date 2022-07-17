@@ -5,29 +5,29 @@
             <div class="card-body">
                 <form [formGroup]="carAddForm">
                     <div class="mb-3">
-                        <label for="brandName">Brand Name</label>
+                        <label for="brandId">Brand Id</label>
                         <div class="form-group">
-                            <input type="text" 
-                            id="brandName" 
-                            formControlName="brandName" 
+                            <input type="number" 
+                            id="brandId" 
+                            formControlName="brandId" 
                             class="form-control"
-                            placeholder="Brand Name"/>
+                            placeholder="Brand ID"/>
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="colorName">Color Name</label>
+                        <label for="colorName">Color Id</label>
                         <div class="form-group">
-                            <input type="text" 
-                            id="colorName" 
-                            formControlName="colorName" 
+                            <input type="number" 
+                            id="colorId" 
+                            formControlName="colorId" 
                             class="form-control"
-                            placeholder="Color Name"/>
+                            placeholder="Color ID"/>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="modelYear">Model Year</label>
                         <div class="form-group">
-                            <input type="number" 
+                            <input type="text" 
                             id="modelYear" 
                             formControlName="modelYear" 
                             class="form-control"

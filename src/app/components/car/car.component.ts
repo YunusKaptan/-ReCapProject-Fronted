@@ -120,4 +120,6 @@ export class CarComponent implements OnInit {
     this.toastrService.success("Added to favorites", car.brandName)
     this.cartService.addToCart(car);
   }
+
+ 
 }

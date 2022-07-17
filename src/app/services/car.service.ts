@@ -6,6 +6,7 @@ import { Car } from '../models/car';
 import { SingleResponseModel } from '../models/singleResponseModel';
 import { CarDetails } from '../models/carDetails';
 import { Rental } from '../models/rental';
+import { ResponseModel } from '../models/responseModel';
 
 
 @Injectable({
@@ -52,5 +53,9 @@ export class CarService {
   getByCarId(carId:number):Observable<SingleResponseModel<Car>>{
     let newPath=this.apiUrl+"cars/getbycarid?carId="+carId;
     return this.httpClient.get<SingleResponseModel<Car>>(newPath)
+  }
+  add(car:Car):Observable<ResponseModel>
+  {
+    return this.httpClient.post<ResponseModel>(this.apiUrl+"cars/add",car)
   }
 }
